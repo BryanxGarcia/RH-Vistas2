@@ -1,1 +1,61 @@
-<p>list-epp-postes works!</p>
+<div class="container">
+    <h2>Listado de las respuestas del formulario EPP Postes</h2>
+</div>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-sm table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col" class="normal-th">Nombre</th>
+                    <th scope="col" class="normal-th">Botas Dialecticas</th>
+                    <th scope="col" class="normal-th">Camisas Manga Larga</th>
+                    <th scope="col" class="normal-th">Pantalon</th>
+                    <th scope="col" class="normal-th">Guantes Carnaza</th>
+                    <th scope="col" class="normal-th">Cinturon</th>
+                    <th scope="col" class="normal-th">Bandola</th>
+                    <th scope="col" class="normal-th">Lentes de Seguridad</th>
+                    <th scope="col" class="normal-th">Casco Dielectrico</th>
+                    <th scope="col" class="normal-th">Chaleco de Seguridad</th>
+                    <th scope="col" class="normal-th">Barbiquejo</th>
+                    <th scope="col" class="normal-th">Pulsera Deteccion Voltaje</th>
+                    <th scope="col" class="normal-th">Senaletica</th>
+                    <th scope="col" class="normal-th">Comentarios</th>
+                    <th scope="col" class="normal-th">Fecha Llenado</th>
+                    <th scope="col" class="normal-th">Ultima modificacion</th>
+                    <th scope="col" class="normal-th">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of Listaepppostes | paginate: { itemsPerPage: 10, currentPage: p }" class="table-active">
+                    <td>{{ item.FkUsuario }}</td>
+                    <td>{{ item.BotasDialecticas }}</td>
+                    <td>{{ item.CamisasMangaLarga }}</td>
+                    <td>{{ item.Pantalon }}</td>
+                    <td>{{ item.GuantesCarnaza }}</td>
+                    <td>{{ item.Cinturon }}</td>
+                    <td>{{ item.Bandola }}</td>
+                    <td>{{ item.LentesSeguridad }}</td>
+                    <td>{{ item.CascoDielectrico }}</td>
+                    <td>{{ item.ChalecoSeguridad }}</td>
+                    <td>{{ item.Barbiquejo }}</td>
+                    <td>{{ item.PulseraDeteccionVoltaje }}</td>
+                    <td>{{ item.Senaletica }}</td>
+                    <td>{{ item.Comentarios }}</td>
+                    <td>{{ item.FechaLlenado | date:'dd/MM/yyyy' }}</td>
+                    <td>{{ item.FechaActualizado | date:'dd/MM/yyyy' }}</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" (click)="eliminarItem(item.PKEPPPostes)">
+                            <i class="bi bi-trash"></i> Eliminar
+                        </button>
+                        <button class="btn btn-primary btn-sm" (click)="verDetalles(item.PKEPPPostes)">
+                            <i class="bi bi-eye"></i> Ver Detalles
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="pagination">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+</div>
