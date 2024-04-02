@@ -1,5 +1,21 @@
 .normal-th {
-    font-weight: normal;
-    font-size: 0.8rem;
-  }
-  
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+.wrapper {
+  display: flex;
+}
+
+#content {
+  flex: 1;
+  padding: 10px;
+}
+
+/* Estilos de la tabla y paginación */
+.normal-th {
+  vertical-align: middle !important;
+}
+
+.pagination {
+  margin-top: 20px;
+}

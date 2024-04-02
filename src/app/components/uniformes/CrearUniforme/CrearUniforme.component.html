@@ -1,0 +1,108 @@
+<div class="container" style="justify-items: center;">
+  <h4 style="text-align:center;">Formulario de cantidad de uniformes recibidos</h4>
+</div>
+<div class="container">
+  <div class="form-container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" value="Bryan Garcia" disabled class="form-control" id="nombre">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="jefeDirecto">Jefe Directo:</label>
+          <input type="text" value="Juan Carlos" disabled class="form-control" id="jefeDirecto">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="region">Región:</label>
+          <input type="text" value="Sur" disabled class="form-control" id="region">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="ciudad">Ciudad:</label>
+          <input type="text" value="Cancún" disabled class="form-control" id="ciudad">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+    <form (ngSubmit)="onSubmit()" class="form-container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="camisas">Camisas</label>
+            <input type="number"  min="0" class="form-control" id="camisas" [(ngModel)]="uniforme.Camisas" name="camisas">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="pantalones">Pantalones</label>
+            <input type="number"   min="0" class="form-control" id="pantalones" [(ngModel)]="uniforme.Pantalones" name="pantalones">
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="sombreros">Sombreros</label>
+            <input type="number"  min="0" class="form-control" id="sombreros" [(ngModel)]="uniforme.Sombreros" name="sombreros">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="botas">Botas</label>
+            <input type="number"  min="0" class="form-control" id="botas" [(ngModel)]="uniforme.Botas" name="botas">
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="chalecos">Chalecos</label>
+            <input type="number"  min="0" class="form-control" id="chalecos" [(ngModel)]="uniforme.Chalecos" name="chalecos">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="chamarras">Chamarras</label>
+            <input type="number"  min="0" class="form-control" id="chamarras" [(ngModel)]="uniforme.Chamarras" name="chamarras">
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="impermeables">Impermeables</label>
+            <input type="number"  min="0" class="form-control" id="impermeables" [(ngModel)]="uniforme.Impermeables" name="impermeables">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="overoles">Overoles</label>
+            <input type="number"  min="0" class="form-control" id="overoles" [(ngModel)]="uniforme.Overoles" name="overoles">
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="observaciones">Observaciones</label>
+            <textarea class="form-control" id="observaciones" [(ngModel)]="uniforme.Observaciones" name="observaciones"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+  

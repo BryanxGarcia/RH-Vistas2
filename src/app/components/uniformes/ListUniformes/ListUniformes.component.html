@@ -1,0 +1,61 @@
+<div class="wrapper">
+    <app-siderbar></app-siderbar>
+
+    <div id="content">
+        <div class="container">
+            <h2>Listado de Uniformes</h2>
+        </div>
+
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table table-sm table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="normal-th">Nombre</th>
+                            <th scope="col" class="normal-th">Camisas</th>
+                            <th scope="col" class="normal-th">Pantalones</th>
+                            <th scope="col" class="normal-th">Sombreros</th>
+                            <th scope="col" class="normal-th">Botas</th>
+                            <th scope="col" class="normal-th">Chalecos</th>
+                            <th scope="col" class="normal-th">Chamarras</th>
+                            <th scope="col" class="normal-th">Impermeables</th>
+                            <th scope="col" class="normal-th">Overoles</th>
+                            <th scope="col" class="normal-th">Observaciones</th>
+                            <th scope="col" class="normal-th">Fecha Llenado</th>
+                            <th scope="col" class="normal-th">Ultima modificacion</th>
+                            <th scope="col" class="normal-th">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of listaUniformes | paginate: { itemsPerPage: 10, currentPage: 1 }"
+                            class="table-active">
+                            <td>Bryan Garcia</td>
+                            <td>{{ item.Camisas }}</td>
+                            <td>{{ item.Pantalones }}</td>
+                            <td>{{ item.Sombreros }}</td>
+                            <td>{{ item.Botas }}</td>
+                            <td>{{ item.Chalecos }}</td>
+                            <td>{{ item.Chamarras }}</td>
+                            <td>{{ item.Impermeables }}</td>
+                            <td>{{ item.Overoles }}</td>
+                            <td>{{ item.Observaciones }}</td>
+                            <td>{{ item.FechaLlenado | date:'dd/MM/yy' }}</td>
+                            <td>{{ item.FechaActualizado | date:'dd/MM/yy' }}</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                                <button class="btn btn-warning btn-sm">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination">
+                <pagination-controls (pageChange)="1"></pagination-controls>
+            </div>
+        </div>
+    </div>
+</div>

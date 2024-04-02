@@ -1,0 +1,48 @@
+/* agregar-epp-postes.component.css */
+
+/* Alinea el formulario al centro */
+.form-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1600px;
+  }
+  
+  /* Estilo para las etiquetas de los campos */
+  label {
+      font-weight: normal;
+      font-size: 0.8rem;
+  }
+  
+  /* Espaciado entre los campos */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para el botón de enviar */
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Estilo para el botón de enviar al pasar el ratón */
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo para los campos de entrada */
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para el área de texto */
+  textarea.form-control {
+    height: 100px;
+  }
+  

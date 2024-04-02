@@ -1,1 +1,185 @@
-<p>agregar-epp-postes works!</p>
+<div class="container" style="justify-items: center;">
+  <h4 style="text-align:center;">Formulario EPP Postes</h4>
+</div>
+<div class="container">
+  <div class="form-container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" value="Bryan Garcia" disabled class="form-control" id="nombre">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="jefeDirecto">Jefe Directo:</label>
+          <input type="text" value="Juan Carlos" disabled class="form-control" id="jefeDirecto">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="region">Región:</label>
+          <input type="text" value="Sur" disabled class="form-control" id="region">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="ciudad">Ciudad:</label>
+          <input type="text" value="Cancún" disabled class="form-control" id="ciudad">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <form (ngSubmit)="onSubmit()" class="form-container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="botasDialecticas">Botas Dialecticas:</label>
+          <select class="form-control" id="botasDialecticas" [(ngModel)]="eppPostes.BotasDialecticas"
+            name="botasDialecticas">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="camisasMangaLarga">Camisas Manga Larga:</label>
+          <select class="form-control" id="camisasMangaLarga" [(ngModel)]="eppPostes.CamisasMangaLarga"
+            name="camisasMangaLarga">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="pantalon">Pantalón:</label>
+          <select class="form-control" id="pantalon" [(ngModel)]="eppPostes.Pantalon" name="pantalon">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="guantesCarnaza">Guantes de Carnaza:</label>
+          <select class="form-control" id="guantesCarnaza" [(ngModel)]="eppPostes.GuantesCarnaza" name="guantesCarnaza">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="cinturon">Cinturón:</label>
+          <select class="form-control" id="cinturon" [(ngModel)]="eppPostes.Cinturon" name="cinturon">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="bandola">Bandola:</label>
+          <select class="form-control" id="bandola" [(ngModel)]="eppPostes.Bandola" name="bandola">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="lentesSeguridad">Lentes de Seguridad:</label>
+          <select class="form-control" id="lentesSeguridad" [(ngModel)]="eppPostes.LentesSeguridad"
+            name="lentesSeguridad">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="cascoDielectrico">Casco Dielectrico:</label>
+          <select class="form-control" id="cascoDielectrico" [(ngModel)]="eppPostes.CascoDielectrico"
+            name="cascoDielectrico">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="chalecoSeguridad">Chaleco de Seguridad:</label>
+          <select class="form-control" id="chalecoSeguridad" [(ngModel)]="eppPostes.ChalecoSeguridad"
+            name="chalecoSeguridad">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="barbiquejo">Barbiquejo:</label>
+          <select class="form-control" id="barbiquejo" [(ngModel)]="eppPostes.Barbiquejo" name="barbiquejo">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="pulseraDeteccionVoltaje">Pulsera de Detección de Voltaje</label>
+          <select class="form-control" id="pulseraDeteccionVoltaje" [(ngModel)]="eppPostes.PulseraDeteccionVoltaje"
+            name="pulseraDeteccionVoltaje">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="senaletica">Señalética</label>
+          <select class="form-control" id="senaletica" [(ngModel)]="eppPostes.Senaletica" name="senaletica">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="comentarios">Comentarios</label>
+          <textarea class="form-control" id="comentarios" [(ngModel)]="eppPostes.Comentarios"
+            name="comentarios"></textarea>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="foto1">Foto 1</label>
+          <input type="file" class="form-control" id="foto1" [(ngModel)]="eppPostes.Foto1" name="foto1">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="foto2">Foto 2</label>
+          <input type="file" class="form-control" id="foto2" [(ngModel)]="eppPostes.Foto2" name="foto2">
+        </div>
+      </div>
+
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>

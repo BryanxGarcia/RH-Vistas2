@@ -1,6 +1,6 @@
 export interface Epppostes {
     PKEPPPostes: number;
-    FkUsuario: number;
+    FkUsuario: string;
     BotasDialecticas: string;
     CamisasMangaLarga: string;
     Pantalon: string;

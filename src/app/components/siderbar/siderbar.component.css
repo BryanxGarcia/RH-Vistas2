@@ -1,0 +1,59 @@
+.wrapper {
+  display: flex;
+}
+
+#sidebar {
+  width: 250px;
+  height: 100vh; /* Establece la altura del sidebar para que ocupe toda la altura de la ventana */
+  background: #000;
+  color: #fff;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  list-style: none; /* Elimina los estilos de lista predeterminados */
+  margin: 0; /* Elimina el margen */
+  padding-left: 0; /* Elimina el relleno izquierdo */
+}
+
+#sidebar ul li {
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  display: block; /* Convierte los enlaces en bloques para que ocupen todo el ancho disponible */
+  padding: 10px;
+  color: #fff;
+  text-decoration: none; /* Elimina la decoración de texto subrayado */
+}
+
+#sidebar ul li a:hover {
+  background-color: #555;
+}
+
+#content {
+  flex: 1; /* Hace que el contenido principal ocupe todo el espacio restante */
+  padding: 20px;
+  overflow-y: auto; /* Agrega desplazamiento vertical al contenido si es necesario */
+}
+
+#sidebarCollapse {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    display: none; /* Oculta el sidebar en dispositivos más pequeños */
+  }
+
+  #content {
+    width: 100%;
+  }
+}

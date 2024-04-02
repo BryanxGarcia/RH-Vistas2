@@ -1,53 +1,61 @@
-<div class="container">
-    <h2>Listado de las respuestas del formulario EPP Torres</h2>
-</div>
-<div class="container">
-    <div class="table-responsive">
-        <table class="table table-sm table-bordered">
-            <thead>
-                <tr>
-                    <th scope="col" class="normal-th">Nombre</th>
-                    <th scope="col" class="normal-th">Arnes de 5 posiciones</th>
-                    <th scope="col" class="normal-th">Botas de seguridad</th>
-                    <th scope="col" class="normal-th">Bandola</th>
-                    <th scope="col" class="normal-th">Guantes</th>
-                    <th scope="col" class="normal-th">Lestes de seguridad</th>
-                    <th scope="col" class="normal-th">Mosqueton</th>
-                    <th scope="col" class="normal-th">Shock absorbente</th>
-                    <th scope="col" class="normal-th">Sujetador de línea de vida</th>
-                    <th scope="col" class="normal-th">Casco con barbiquejo</th>
-                    <th scope="col" class="normal-th">Comentarios</th>
-                    <th scope="col" class="normal-th">Ultima modificacion</th>
-                    <th scope="col" class="normal-th">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let item of Listaepptorres | paginate: { itemsPerPage: 10, currentPage: p }" class="table-active">
-                    <td>{{ item.fkUsuario }}</td>
-                    <td>{{ item.ArnesFPosiciones }}</td>
-                    <td>{{ item.BotasSeguridad }}</td>
-                    <td>{{ item.Bandola }}</td>
-                    <td>{{ item.Guantes }}</td>
-                    <td>{{ item.LestesSeguridad }}</td>
-                    <td>{{ item.Mosqueton }}</td>
-                    <td>{{ item.ShockAbsorbente }}</td>
-                    <td>{{ item.SujetadorLineaVida }}</td>
-                    <td>{{ item.CascoBarbiquejo }}</td>
-                    <td>{{ item.Comentarios }}</td>
-                    <td>{{ item.FechaActualizado }}</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm" (click)="eliminarItem(item.PKepptorres)">
-                            <i class="bi bi-trash"></i> Eliminar
-                        </button>
-                        <button class="btn btn-primary btn-sm" (click)="verDetalles(item.PKepptorres)">
-                            <i class="bi bi-eye"></i> Ver Detalles
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<div class="wrapper">
+    <app-siderbar></app-siderbar>
+  
+    <div id="content">
+      <div class="container">
+        <h2>Listado de las respuestas del formulario EPP Torres</h2>
+      </div>
+  
+      <div class="container">
+        <div class="table-responsive">
+          <table class="table table-sm table-bordered">
+              <thead>
+                  <tr>
+                      <th scope="col" class="normal-th">Nombre</th>
+                      <th scope="col" class="normal-th">Arnes de 5 posiciones</th>
+                      <th scope="col" class="normal-th">Botas de seguridad</th>
+                      <th scope="col" class="normal-th">Bandola</th>
+                      <th scope="col" class="normal-th">Guantes</th>
+                      <th scope="col" class="normal-th">Lestes de seguridad</th>
+                      <th scope="col" class="normal-th">Mosqueton</th>
+                      <th scope="col" class="normal-th">Shock absorbente</th>
+                      <th scope="col" class="normal-th">Sujetador de línea de vida</th>
+                      <th scope="col" class="normal-th">Casco con barbiquejo</th>
+                      <th scope="col" class="normal-th">Comentarios</th>
+                      <th scope="col" class="normal-th">Ultima modificacion</th>
+                      <th scope="col" class="normal-th">Acciones</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let item of Listaepptorres | paginate: { itemsPerPage: 10, currentPage: p }" class="table-active">
+                      <td class="normal-th">Bryan Garcia</td>
+                      <td class="normal-th">{{ item.ArnesFPosiciones }}</td>
+                      <td class="normal-th">{{ item.BotasSeguridad }}</td>
+                      <td class="normal-th">{{ item.Bandola }}</td>
+                      <td class="normal-th">{{ item.Guantes }}</td>
+                      <td class="normal-th">{{ item.LestesSeguridad }}</td>
+                      <td class="normal-th">{{ item.Mosqueton }}</td>
+                      <td class="normal-th">{{ item.ShockAbsorbente }}</td>
+                      <td class="normal-th">{{ item.SujetadorLineaVida }}</td>
+                      <td class="normal-th">{{ item.CascoBarbiquejo }}</td>
+                      <td class="normal-th">{{ item.Comentarios }}</td>
+                      <td class="normal-th">{{ item.FechaActualizado | date:'dd/MM/yyyy' }}</td>
+                      <td class="normal-th">
+                          <button class="btn btn-danger btn-sm">
+                              <i class="bi bi-trash"></i> 
+                          </button>
+                          <button class="btn btn-warning btn-sm">
+                              <i class="bi bi-eye"></i> 
+                          </button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
     </div>
-    <div class="pagination">
-        <pagination-controls (pageChange)="p = $event"></pagination-controls>
-    </div>
-</div>
+  </div>
+  
